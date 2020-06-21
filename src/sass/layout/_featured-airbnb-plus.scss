@@ -1,0 +1,11 @@
+.featured-airbnb-plus{
+    grid-column:full-start/full-end;
+
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(50rem,1fr));
+        grid-column-gap: $default-grid-column-gap;
+        // margin-bottom: -.2rem;
+    }
+
+}
