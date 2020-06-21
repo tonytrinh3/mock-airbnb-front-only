@@ -12,7 +12,7 @@ class RoomListingPage extends React.Component{
 
     
     //then you call the action to use in here
-
+    //disabled this UNTIL express and mongodb to come into play
     // componentDidMount(){
     //     this.props.fetchBookings();
     // }
@@ -20,6 +20,7 @@ class RoomListingPage extends React.Component{
  
     
     renderList(){
+         //disabled this UNTIL express and mongodb to come into play
         // return this.props.bookings.map(booking=>{
         return this.props.rooms.map(booking=>{
             const {
@@ -96,7 +97,9 @@ class RoomListingPage extends React.Component{
                         {this.renderList()}
                     </div>
                     <GoogleMaps
-                       bookings = {this.props.bookings}
+                     //disabled this UNTIL express and mongodb to come into play
+                    //    bookings = {this.props.bookings}
+                       bookings = {this.props.rooms}
                     />
                 </div>
                 <Footer/>
