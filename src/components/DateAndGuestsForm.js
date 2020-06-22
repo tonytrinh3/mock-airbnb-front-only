@@ -6,7 +6,8 @@ import { DateRangePicker } from 'react-dates';
 import moment from 'moment';
 
 import { connect } from 'react-redux';
-import {createUserReservation} from "../actions";
+import {createUserReservation, createUserReservationTEMP,increaseIDTEMP} from "../actions";
+
 
 
 
@@ -24,6 +25,7 @@ class DateAndGuestsForm extends React.Component{
             numTotal: 0,
             toggleDropdown: false,
             showError: false
+            
     
         }
         
@@ -77,7 +79,11 @@ class DateAndGuestsForm extends React.Component{
                 showError: false
             })
 
-            this.props.createUserReservation(reservation);
+            //disabled this UNTIL express and mongodb to come into play
+            // this.props.createUserReservation(reservation);
+            this.props.increaseIDTEMP();//to increase id for reservations for user to make more reservations
+            this.props.createUserReservationTEMP(reservation);
+            
         }
         
         // if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
@@ -291,6 +297,6 @@ class DateAndGuestsForm extends React.Component{
 
 
 
-export default connect(null,{createUserReservation})(DateAndGuestsForm);
+export default connect(null,{createUserReservation,createUserReservationTEMP,increaseIDTEMP})(DateAndGuestsForm);
 
 
