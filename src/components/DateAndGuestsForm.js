@@ -69,7 +69,7 @@ class DateAndGuestsForm extends React.Component{
 
         }
 
-        if(startDate === null || endDate === null || numTotal ===0){
+        if(startDate === null || endDate === null || numTotal ===0 || !this.props.isSignedIn){
             this.setState({
                 showError: true
             })
@@ -101,17 +101,22 @@ class DateAndGuestsForm extends React.Component{
             numTotal
         } = this.state;
 
+        
+
 
         //this is always going to change when the state changes due to other functions running to change the state
-        if (startDate === null & numTotal === 0){
-            return <p className="error-statement">Please enter a start date, end date, and amount of people for the reservation</p>
+        if (!this.props.isSignedIn){
+            return <p className="error-statement">Please sign into Google in order to reserve a room.</p>
+        } else if (startDate === null & numTotal === 0){
+            return <p className="error-statement">Please enter a start date, end date, and amount of people for the reservation.</p>
         } else if (startDate === null && numTotal > 0 ){
-            return <p className="error-statement">Please enter a start date and end date for the reservation</p>
+            return <p className="error-statement">Please enter a start date and end date for the reservation.</p>
         } else if(!(startDate === null) && numTotal === 0  ){
-            return <p className="error-statement">Please enter an amount of people for the reservation</p>
+            return <p className="error-statement">Please enter an amount of people for the reservation.</p>
         } else{
             return null;
         }
+    
      
     }
 
@@ -294,9 +299,16 @@ class DateAndGuestsForm extends React.Component{
    
 };
 
+const mapStateToProps = (state)=>{
+    console.log(state);
+    return {
+        isSignedIn: state.auth.isSignedIn
+    }
+}
 
 
 
-export default connect(null,{createUserReservation,createUserReservationTEMP,increaseIDTEMP})(DateAndGuestsForm);
+
+export default connect(mapStateToProps,{createUserReservation,createUserReservationTEMP,increaseIDTEMP})(DateAndGuestsForm);
 
 
