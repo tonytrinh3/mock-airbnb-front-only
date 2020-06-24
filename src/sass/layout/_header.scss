@@ -2,14 +2,14 @@
     // grid-row: [header-start] / [header-end];
     grid-column:full-start/full-end;
     
-    background-image: linear-gradient(rgba(blue, .10), rgba(green, .10)), url(../../img/hong-kong.jpg);
-    //background-image: url(../../img/hong-kong.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
+    //background-image: linear-gradient(rgba(blue, .10), rgba(green, .10)), url(../../img/san-francisco-3.png);
+    background-image: url(../../img/san-francisco-4.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
     background-size: cover;
-    // background-position: center;
+    background-position: center ;
 
     display:grid;
    
-    grid-template-columns: 5rem minmax(40rem,60rem) 1fr;
+    grid-template-columns: 10rem minmax(40rem,60rem) 1fr;
     grid-template-rows: min-content minmax(min-content,75rem) 1fr;
 
 
@@ -22,10 +22,12 @@
         font-size: 1.9rem;
         text-align: right;
         
-        //justify-self: end; ///https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
-        align-self: center;
+        justify-self: end; ///https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
+        align-self: end;
+        
         margin-right: 5rem;
-        // margin-top: 25rem;
+        margin-bottom: 5rem;
+   
 
 
     }
