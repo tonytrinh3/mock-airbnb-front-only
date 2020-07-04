@@ -274,7 +274,7 @@ class DateAndGuestsForm extends React.Component{
 
         return (
             <div className = "date-guest-forms">
-                <section className="date-guest-forms__section">
+                <section className="date-guest-forms__section margin-bottom-medium-2">
                 <DateRangePicker
                     startDateId="startDate"
                     endDateId="endDate"
@@ -286,7 +286,7 @@ class DateAndGuestsForm extends React.Component{
                 />
                 </section>
              
-               <section className="date-guest-forms__section">
+               <section className="date-guest-forms__section margin-bottom-medium-2">
                     <h3 className ="header-small margin-bottom-medium">Guests</h3>
                     <div className = "date-guest-forms__guests input-default" onClick={this.toggleDropdown}>
                         {numTotal ===0? "Add guests" : `${numTotal} guests` }

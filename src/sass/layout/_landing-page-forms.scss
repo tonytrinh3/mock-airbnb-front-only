@@ -16,6 +16,8 @@
     box-shadow: $default-box-shadow; 
 
     display: grid;
+
+
    
 
     &__header{
@@ -30,6 +32,10 @@
     &__section h3{
         text-transform: uppercase;
     }
+
+    // &__section {
+    //     align-self: center;
+    // }
 
 };
 
