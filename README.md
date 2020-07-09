@@ -1,5 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Mock-Airbnb website that users can search and reserve rooms in San Francisco. Built in React, Redux, and Sass.
+
+### Features
+
+* Ability to login via Google OAuth2.0
+ * Your name and picture from Google are shown on the navigation bar. 
+* Room data and listings are populated on the page from a local database via RESTful convention
+  * (.get('/bookings')) for all rooms 
+  * (.get('/bookings/${id}')) for one room
+* Reserve a room
+  * (.post('/user',{...reservation,userId})) 
+  * Reseveration detail and corresponding Google ID are posted to a local database
+* View your upcoming reservations
+  * Your reseverations are rendered from the database by your matching Google ID 
+
+
+
+### Demo
+[Demo Link](https://master.d14eeu5976vw2v.amplifyapp.com/) 
+
+### Learn More
+Learn more about how the app operates at my website
+[Tony Trinh Portfolio](https://www.tonywtrinh.com) 
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -7,7 +33,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3011](http://localhost:3011) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
