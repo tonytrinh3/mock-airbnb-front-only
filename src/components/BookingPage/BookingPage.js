@@ -17,8 +17,6 @@ import Footer from '../Footer';
 import {connect} from 'react-redux';
 import {fetchBooking} from '../../actions/index';
 
-// import { Button, Alert } from 'reactstrap';
-
 class BookingPage extends React.Component{
 
 

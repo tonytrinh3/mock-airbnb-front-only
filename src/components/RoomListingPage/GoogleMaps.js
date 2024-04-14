@@ -5,11 +5,6 @@ import { Map, GoogleApiWrapper, Marker,InfoWindow } from 'google-maps-react';
 // import history from '../../history';
 // import PlacesCards from '../PlacesCard';
 
-// import dotenv from 'dotenv'
-// dotenv.config({ silent: true })
-
-
-
 
 class GoogleMaps extends React.Component{
     state = {

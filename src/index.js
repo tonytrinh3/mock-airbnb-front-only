@@ -5,7 +5,6 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import reduxThunk from 'redux-thunk';
 
 import App from './App';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import reducers from './reducers';
 
 import * as serviceWorker from './serviceWorker';

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { renderChildren } from 'redux-form/lib/ReduxFormContext';
 import {connect} from 'react-redux';
 import {fetchUserReservations} from '../../actions';
 import Navigation from '../Navigation';
